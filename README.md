@@ -51,3 +51,24 @@ output is:
   chineseTermOffset: 5
 }
 ```
+
+if it doesn't find calendar data, the result is:
+
+```
+{
+  year: 1000,
+  month: 1,
+  day: 1,
+  lunarMonth: '',
+  lunarMonthDigit: 0,
+  lunarDay: '',
+  lunarDayDigit: 0,
+  isLunarLeapMonth: false,
+  chineseYear: '',
+  chineseMonth: '',
+  chineseDay: '',
+  chineseTerm: '',
+  chineseTermOffset: ''
+}
+```
+
