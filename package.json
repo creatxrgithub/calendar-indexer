@@ -1,5 +1,5 @@
 {
-  "name": "calendar_indexer",
+  "name": "chinese-calendar-indexer",
   "version": "1.0.0",
   "description": "chinese lunar calendar indexer",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creatxrgithub/calendar-indexer.git"
+    "url": "git+https://github.com/creatxrgithub/chinese-calendar-indexer.git"
   },
   "keywords": [
     "chinese",
@@ -19,9 +19,9 @@
   "author": "creatxr",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/creatxrgithub/calendar-indexer/issues"
+    "url": "https://github.com/creatxrgithub/chinese-calendar-indexer/issues"
   },
-  "homepage": "https://github.com/creatxrgithub/calendar-indexer#readme",
+  "homepage": "https://github.com/creatxrgithub/chinese-calendar-indexer#readme",
   "dependencies": {
     "csv2array_regular": "^1.0.0",
     "moment-timezone": "^0.5.31",
