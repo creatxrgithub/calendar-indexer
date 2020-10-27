@@ -30,7 +30,7 @@ let baseDate = new moment.tz(dateBase[0].date, 'YYYY-MM-DD', timeZone);
 
 class CalendarIndexer {
 	constructor() {
-		this.dataDir = 'data';
+		this.dataDir = path.join(__dirname,'data');
 		this.curYear = null;
 		this.curCal = null;
 	}
@@ -124,8 +124,12 @@ class CalendarIndexer {
 					this.curCal = [];
 					for(let row of data) this.curCal.push(row.split(/\s+/));
 					zip.close();
+				} else {
+					throw new Error('not found chinese calendar data');
 				}
 			} catch(e) {
+				console.log(e);
+				console.log(path.join(this.dataDir, 'calendar'));
 				return retData;  //沒有數據就返回初始化的數據
 			}
 			this.curYear = retData.year;
