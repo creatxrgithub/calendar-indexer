@@ -1,5 +1,13 @@
 # chinese lunar calendar indexer 中國農曆黃曆查詢器
 
+install:
+
+```
+npm install chinese-calendar-indexer
+```
+
+demo code:
+
 ```
 const CalendarIndexer = require('chinese-calendar-indexer');
 const moment = require('moment-timezone');
@@ -23,6 +31,7 @@ const timeZone = 'Asia/Shanghai';
 
 })();  //end top async()
 ```
+
 output is:
 
 ```
