@@ -1,14 +1,13 @@
 /**
  * 使用從香港天文臺下載的農曆數據
  */
-const csv2array = require('csv2array_regular');
-
 const fs = require('fs');
 const path = require('path');
 const moment = require('moment-timezone');
-
 const pEvent = require('p-event');  //可將 event 轉爲等待 await
 const StreamZip = require('node-stream-zip');
+
+const csv2array = require( fs.existsSync('csv2array_regular') ? 'csv2array_regular' : '../csv2array_regular' );
 
 const timeZone = 'Asia/Shanghai';
 const tiangan = '甲乙丙丁戊己庚辛壬癸';

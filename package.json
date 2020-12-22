@@ -2,7 +2,7 @@
   "name": "chinese-calendar-indexer",
   "version": "1.0.9",
   "description": "chinese lunar calendar indexer",
-  "main": "index.js",
+  "main": "chinese-calendar-indexer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
