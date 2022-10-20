@@ -162,7 +162,8 @@ class CalendarIndexer {
 					retData.chineseMonth = chineseMonth[(chineseTermIndex-1+24)%24];
 					retData.chineseTerm =chineseTerm[(chineseTermIndex-1+24)%24];
 					//不讀取前一年的日曆，只知本節氣內倒數第幾天，卽下一節氣前幾天
-					retData.chineseTermOffset = index-i;  //+15 有可能不準確
+					//retData.chineseTermOffset = index-i;  //+15 有可能不準確
+					retData.chineseTermOffset = index-i+15;  //+15 有可能不準確。節氣肯定都是 15 天？
 					break;
 				}
 			}
