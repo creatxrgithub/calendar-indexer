@@ -7,10 +7,9 @@ const moment = require('moment-timezone');
 //const pEvent = require('p-event');  //可將 event 轉爲等待 await
 const StreamZip = require('node-stream-zip');
 
-//const csv2array = require( fs.existsSync('csv2array_regular') ? 'csv2array_regular' : '../csv2array_regular' );
-const csv2array = require.resolve.paths('csv2array_regular');
-//console.log(path.basename(__dirname));
-//console.log(csv2array);
+const csv2array = require(fs.existsSync(path.join(__dirname,'..','/csv2array_regular')) ? '../csv2array_regular' : 'csv2array_regular');
+//console.log(fs.existsSync(path.join(__dirname,'..','/csv2array_regular')));
+//console.log(__dirname);
 const timeZone = 'Asia/Shanghai';
 const tiangan = '甲乙丙丁戊己庚辛壬癸';
 const dizhi = '子丑寅卯辰巳午未申酉戌亥';

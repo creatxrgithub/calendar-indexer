@@ -1,6 +1,6 @@
 {
   "name": "chinese-calendar-indexer",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "chinese lunar calendar indexer",
   "main": "chinese-calendar-indexer.js",
   "scripts": {
