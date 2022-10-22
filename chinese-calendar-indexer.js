@@ -7,8 +7,10 @@ const moment = require('moment-timezone');
 //const pEvent = require('p-event');  //可將 event 轉爲等待 await
 const StreamZip = require('node-stream-zip');
 
-const csv2array = require( fs.existsSync('csv2array_regular') ? 'csv2array_regular' : '../csv2array_regular' );
-
+//const csv2array = require( fs.existsSync('csv2array_regular') ? 'csv2array_regular' : '../csv2array_regular' );
+const csv2array = require.resolve.paths('csv2array_regular');
+//console.log(path.basename(__dirname));
+//console.log(csv2array);
 const timeZone = 'Asia/Shanghai';
 const tiangan = '甲乙丙丁戊己庚辛壬癸';
 const dizhi = '子丑寅卯辰巳午未申酉戌亥';
@@ -118,7 +120,7 @@ class CalendarIndexer {
 					//使用 async-await 實現，函數要加上 async 關鍵字，調用時可使用頂部 (async () => {   //TODO: result = await function return   })();
 					const zip = new StreamZip({ file: path.join(this.dataDir,'calendar.zip'), storeEntries: true });
 					//await pEvent(zip, 'ready');
-					await new Promise(ready => zip.on("ready", ready));
+					await new Promise(fulfilled => zip.on("ready", fulfilled));
 					let data = Buffer.from(zip.entryDataSync(`T${retData.year}c.txt`)).toString('utf8').split(/[\r\n]+/);
 					//console.log(Buffer.isBuffer(data));
 					this.curCal = [];
